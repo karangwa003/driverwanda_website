@@ -1,0 +1,289 @@
+/* ========================================= */
+/* DRIVERWANDA - FINAL PERFECT VERSION       */
+/* November 10, 2025 - 03:31 PM CAT - RWANDA */
+/* ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 0;
+    line-height: 1.7;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), 
+                url('../image/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 140px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5em;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    max-width: 900px;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.8);
+}
+
+main {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    text-align: center;
+    font-size: 2.4em;
+    margin-bottom: 40px;
+}
+
+.about-content, .contact-details {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    font-size: 1.1em;
+}
+
+.car-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 30px;
+}
+
+.car-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.car-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.car-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.book-btn, .apply-btn, .request-driver-btn, .post-car-btn, .sell-car-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.book-btn:hover { background: #2980b9; transform: scale(1.05); }
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 32px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-btn:hover { color: #e74c3c; }
+
+.form-input {
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.form-input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* GREEN SUBMIT BUTTONS - ALWAYS VISIBLE */
+.submit-btn,
+form button[type="submit"],
+.modal-content button {
+    background: #25D366 !important;
+    color: white !important;
+    padding: 20px !important;
+    border: none !important;
+    border-radius: 14px !important;
+    font-size: 21px !important;
+    font-weight: bold !important;
+    width: 100% !important;
+    margin-top: 25px !important;
+    cursor: pointer !important;
+    box-shadow: 0 8px 25px rgba(37,211,102,0.4) !important;
+    transition: 0.3s !important;
+}
+
+.submit-btn:hover,
+form button[type="submit"]:hover {
+    background: #128C7E !important;
+    transform: translateY(-4px) !important;
+}
+
+/* FOOTER */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 17px;
+    margin-top: 100px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+}
+
+.whatsapp-float img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.whatsapp-float img:hover {
+    transform: scale(1.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.6em; }
+    .hero-content p { font-size: 1.2em; }
+}
+/* OXIMO-STYLE LUXURY FOOTER — ONLY AT THE BOTTOM */
+.oximo-footer {
+    background: #000;
+    color: #0ff;
+    padding: 80px 20px 40px;
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    position: relative;
+}
+.footer-logo h1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #0ff;
+}
+.footer-section h3 {
+    color: #0ff;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.footer-section ul {
+    list-style: none;
+}
+.footer-section ul li {
+    margin: 12px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+}
+.footer-section ul li:before {
+    content: "•";
+    color: #0ff;
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+}
+.footer-social {
+    text-align: center;
+    margin: 40px 0;
+}
+.footer-social a {
+    color: #0ff;
+    margin: 0 20px;
+    font-size: 28px;
+    text-decoration: none;
+}
+.footer-copyright {
+    text-align: center;
+    color: #0ff;
+    font-size: 14px;
+    border-top: 1px solid #0ff3;
+    padding-top: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-logo { text-align: center; margin-bottom: 30px; }
+    .footer-section ul li { padding-left: 0; }
+    .footer-section ul li:before { display: none; }
+}
