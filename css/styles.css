@@ -217,7 +217,7 @@ footer {
     .hero-content h1 { font-size: 2.6em; }
     .hero-content p { font-size: 1.2em; }
 }
-/* OXIMO-STYLE LUXURY FOOTER — ONLY AT THE BOTTOM */
+/*   LUXURY FOOTER — ONLY AT THE BOTTOM */
 .oximo-footer {
     background: #000;
     color: #0ff;
@@ -286,4 +286,91 @@ footer {
     .footer-logo { text-align: center; margin-bottom: 30px; }
     .footer-section ul li { padding-left: 0; }
     .footer-section ul li:before { display: none; }
+}
+/* PROFESSIONAL SERVICE CARDS - LUXURY LOOK */
+.services-cta {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #00d4aa;
+}
+
+.services-subtitle {
+    font-size: 20px;
+    margin-bottom: 60px;
+    opacity: 0.9;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+}
+
+.card-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #00d4aa;
+}
+
+.service-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.service-cta-btn {
+    margin-top: 25px;
+    padding: 14px 32px;
+    background: #5924c5;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.service-cta-btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+.services-contact {
+    margin-top: 70px;
+    font-size: 22px;
+}
+
+.services-contact p {
+    margin: 15px 0;
 }
